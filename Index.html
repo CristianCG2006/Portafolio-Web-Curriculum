@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional | Cristian Chavez Grifen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:#f5f7fb;
+            color:#333;
+            line-height:1.6;
+        }
+
+        header{
+            background:linear-gradient(135deg,#0f172a,#1e3a8a);
+            color:white;
+            padding:70px 10%;
+        }
+
+        .hero{
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:space-between;
+            gap:40px;
+        }
+
+        .hero-text{
+            flex:1;
+            min-width:300px;
+        }
+
+        .hero-text h1{
+            font-size:45px;
+            margin-bottom:10px;
+        }
+
+        .hero-text h2{
+            color:#60a5fa;
+            margin-bottom:20px;
+            font-weight:500;
+        }
+
+        .hero-text p{
+            margin-bottom:25px;
+            text-align:justify;
+        }
+
+        /* --- Estilos Mejorados de Botones (SDD Specification) --- */
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .btn{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:8px;
+            padding:12px 24px;
+            background:#2563eb;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            font-weight: 500;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        .btn:hover{
+            background:#1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-linkedin {
+            background: #0a66c2;
+        }
+
+        .btn-linkedin:hover {
+            background: #084e96;
+            box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+        }
+
+        /* Estado de Confirmación Visual del CV */
+        .btn-cv.success {
+            background-color: #10b981;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            transition: transform 0.2s ease;
+        }
+
+        .btn:hover svg {
+            transform: scale(1.1);
+        }
+
+        .hero-image{
+            flex:1;
+            min-width:280px;
+            display:flex;
+            justify-content:center;
+        }
+
+        .hero-image img{
+            width:320px;
+            height:320px;
+            border-radius:50%;
+            object-fit:cover;
+            border:8px solid white;
+            box-shadow:0px 15px 30px rgba(0,0,0,.25);
+        }
+
+        section{
+            padding:70px 10%;
+        }
+
+        h3{
+            font-size:32px;
+            color:#1e3a8a;
+            margin-bottom:25px;
+        }
+
+        .about p{
+            text-align:justify;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+            margin-top:30px;
+        }
+
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0px 5px 15px rgba(0,0,0,.08);
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card h4{
+            color:#2563eb;
+            margin-bottom:15px;
+        }
+
+        ul{
+            list-style:none;
+        }
+
+        li{
+            margin-bottom:12px;
+        }
+
+        .skills{
+            display:flex;
+            flex-wrap:wrap;
+            gap:15px;
+            margin-top:20px;
+        }
+
+        .skill{
+            background:#2563eb;
+            color:white;
+            padding:12px 20px;
+            border-radius:30px;
+        }
+
+        footer{
+            background:#0f172a;
+            color:white;
+            text-align:center;
+            padding:30px;
+        }
+
+        @media(max-width:768px){
+
+            .hero{
+                flex-direction:column-reverse;
+                text-align:center;
+            }
+
+            .hero-text h1{
+                font-size:34px;
+            }
+
+            .hero-image img{
+                width:250px;
+                height:250px;
+            }
+
+            .btn-container {
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<div class="hero-text">
+
+<h1>Cristian Chavez Grifen</h1>
+
+<h2>Estudiante de Desarrollo Web | Front-End & Back-End</h2>
+
+<p>
+Soy estudiante de segundo año de la carrera de Desarrollo Web con una gran pasión
+por la tecnología, el desarrollo de soluciones digitales y el aprendizaje continuo.
+Me caracterizo por ser una persona autodidacta, comprometida con la calidad del trabajo
+y orientada a resolver problemas mediante herramientas modernas de desarrollo y
+tecnologías de Inteligencia Artificial.
+</p>
+
+<!-- Botones Especificados según SDD -->
+<div class="btn-container">
+    <a href="Currículo de CRISTIAN BISMARCK CHAVEZ GRIFEN.pdf" download="Curriculum_Cristian_Chavez.pdf" id="btnDownloadCV" class="btn btn-cv">
+        <svg id="cvIcon" viewBox="0 0 24 24">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </svg>
+        <span id="cvBtnText">Descargar Curriculum</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">
+        <svg viewBox="0 0 24 24">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+        </svg>
+        <span>LinkedIn</span>
+    </a>
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="img.jpg" alt="Fotografía Profesional">
+
+</div>
+
+</div>
+
+</header>
+
+
+<section class="about">
+
+<h3>Sobre mí</h3>
+
+<p>
+
+Actualmente me encuentro cursando el segundo año de la carrera de Desarrollo Web,
+fortaleciendo conocimientos en tecnologías Front-End y Back-End para el desarrollo
+de aplicaciones modernas. Disfruto trabajar en proyectos que involucren innovación,
+automatización y experiencias digitales que generen valor para empresas y usuarios.
+
+</p>
+
+</section>
+
+
+
+<section>
+
+<h3>Perfil Profesional</h3>
+
+<div class="cards">
+
+<div class="card">
+
+<h4>🎨 Desarrollo Front-End</h4>
+
+<ul>
+
+<li>HTML5</li>
+<li>CSS3</li>
+<li>JavaScript</li>
+<li>Diseño Responsive</li>
+<li>Interfaces modernas</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h4>⚙ Desarrollo Back-End</h4>
+
+<ul>
+
+<li>Desarrollo de aplicaciones web</li>
+<li>Bases de datos</li>
+<li>Lógica de negocio</li>
+<li>Integración de servicios</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h4>💻 Herramientas</h4>
+
+<ul>
+
+<li>Git & GitHub</li>
+<li>Visual Studio Code</li>
+<li>Herramientas Digitales</li>
+<li>Inteligencia Artificial aplicada al desarrollo</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h3>Habilidades</h3>
+
+<div class="skills">
+
+<div class="skill">Trabajo en equipo</div>
+
+<div class="skill">Autodidacta</div>
+
+<div class="skill">Comunicación efectiva</div>
+
+<div class="skill">Resolución de problemas</div>
+
+<div class="skill">Desarrollo Front-End</div>
+
+<div class="skill">Desarrollo Back-End</div>
+
+<div class="skill">Herramientas Digitales</div>
+
+<div class="skill">Inteligencia Artificial</div>
+
+<div class="skill">Aprendizaje continuo</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h3>¿Por qué contratarme?</h3>
+
+<p>
+
+Me considero un profesional en formación con una fuerte capacidad de aprendizaje,
+adaptación y trabajo colaborativo. Estoy comprometido con el desarrollo de soluciones
+web eficientes, utilizando tecnologías actuales y buenas prácticas de programación.
+Mi objetivo es aportar valor a cada proyecto, creciendo profesionalmente mientras
+contribuyo al éxito de la organización.
+
+</p>
+
+</section>
+
+
+<footer>
+
+<h2>Cristian Chavez Grifen</h2>
+
+<p>Desarrollador Web | Front-End | Back-End</p>
+
+<p>
+
+📧 Cristiangrifen2006@gmai
+
+</p>
+
+<p>
+
+© 2026 - Portafolio Profesional
+
+</p>
+
+</footer>
+
+<!-- Script para la Lógica de Confirmación Visual del Botón de CV -->
+<script>
+    const cvButton = document.getElementById('btnDownloadCV');
+    const cvBtnText = document.getElementById('cvBtnText');
+    const cvIcon = document.getElementById('cvIcon');
+
+    // SVGs para estados
+    const downloadIconSVG = '<path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>';
+    const checkIconSVG = '<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>';
+
+    cvButton.addEventListener('click', function () {
+        // Feedback visual inmediato
+        cvButton.classList.add('success');
+        cvIcon.innerHTML = checkIconSVG;
+        cvBtnText.textContent = '¡Descargando CV!';
+
+        // Restaurar estado inicial tras 3 segundos
+        setTimeout(() => {
+            cvButton.classList.remove('success');
+            cvIcon.innerHTML = downloadIconSVG;
+            cvBtnText.textContent = 'Descargar Curriculum';
+        }, 3000);
+    });
+</script>
+
+</body>
+
+</html>
